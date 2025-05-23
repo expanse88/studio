@@ -9,90 +9,90 @@ body {
 
 @layer base {
   :root {
-    /* Light Theme - Natural Landscape & Mountains */
-    --background: 0 0% 98%; /* Very Light Gray - clean base */
-    --foreground: 200 30% 15%; /* Dark Slate Blue text */
+    /* Light Theme - Rivers/Water Droplets */
+    --background: 200 50% 98%; /* Very Light Cool Gray/Off-White */
+    --foreground: 210 40% 20%; /* Dark Slate Blue text */
     --card: 0 0% 100%;
-    --card-foreground: 200 30% 15%;
+    --card-foreground: 210 40% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 200 30% 15%;
-    --primary: 130 45% 45%; /* Forest Green */
-    --primary-foreground: 0 0% 98%; /* Light Gray/Off-white */
-    --secondary: 130 40% 65%; /* Lighter Muted Green */
-    --secondary-foreground: 0 0% 10%; /* Dark text for contrast */
-    --muted: 0 0% 94%;
-    --muted-foreground: 200 20% 40%;
-    --accent: 180 50% 50%; /* Sky Blue/Cyan */
+    --popover-foreground: 210 40% 20%;
+    --primary: 205 65% 55%; /* Clear Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 200 60% 75%; /* Soft Light Blue */
+    --secondary-foreground: 210 40% 15%; /* Darker text for contrast */
+    --muted: 200 40% 94%; /* Muted Cool Gray */
+    --muted-foreground: 210 30% 40%; /* Muted Slate Blue text */
+    --accent: 180 70% 60%; /* Bright Aqua */
     --accent-foreground: 0 0% 100%; /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 180 50% 55%; /* Lighter Sky Blue for focus rings */
+    --border: 200 30% 88%;
+    --input: 200 30% 88%;
+    --ring: 180 70% 65%; /* Lighter Aqua for focus rings */
     
-    --chart-1: 120 60% 50%; /* Leaf Green */
-    --chart-2: 200 60% 55%; /* Sky Blue */
-    --chart-3: 40 50% 50%;  /* Earthy Brown */
-    --chart-4: 150 50% 45%; /* Teal Green */
-    --chart-5: 30 60% 70%;  /* Sandy Brown */
+    --chart-1: 205 65% 55%; /* Primary Blue */
+    --chart-2: 200 60% 75%; /* Secondary Soft Light Blue */
+    --chart-3: 180 70% 60%; /* Accent Aqua */
+    --chart-4: 210 50% 65%; /* Muted Slate Blue */
+    --chart-5: 0 0% 50%;   /* Darker Gray for neutrality */
     --radius: 0.5rem;
 
     /* Sidebar variables for light theme */
-    --sidebar-background: 0 0% 96%; /* Slightly off-white */
-    --sidebar-foreground: 200 30% 15%;
-    --sidebar-primary: 130 45% 45%; 
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 180 50% 50%; 
+    --sidebar-background: 200 50% 96%; 
+    --sidebar-foreground: 210 40% 20%;
+    --sidebar-primary: 205 65% 55%; 
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 70% 60%; 
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 180 50% 55%;
+    --sidebar-border: 200 30% 85%;
+    --sidebar-ring: 180 70% 65%;
   }
 
   .dark {
-    /* Dark Theme - Natural Landscape & Mountains */
-    --background: 200 30% 20%;  /* Dark Slate Blue/Teal - reminiscent of mountain lakes/night sky */
+    /* Dark Theme - Rivers/Water Droplets */
+    --background: 210 30% 15%;  /* Deep Dark Blue */
     --foreground: 0 0% 90%;    /* Light Gray/Off-white */
 
-    --card: 200 30% 25%;      /* Slightly Lighter Slate Blue/Teal */
+    --card: 210 30% 20%;      /* Slightly Lighter Deep Dark Blue */
     --card-foreground: 0 0% 90%;
 
-    --popover: 200 30% 25%;
+    --popover: 210 30% 20%;
     --popover-foreground: 0 0% 90%;
 
-    --primary: 130 40% 40%;     /* Forest Green - for mountains/trees */
-    --primary-foreground: 0 0% 95%; /* Light Gray/Off-white for contrast */
+    --primary: 200 70% 50%;     /* Stronger Blue */
+    --primary-foreground: 0 0% 95%; 
 
-    --secondary: 130 35% 55%;    /* Muted Lighter Green - for highlights or secondary elements */
-    --secondary-foreground: 0 0% 10%; /* Dark text for contrast on lighter green */
+    --secondary: 190 50% 60%;    /* Lighter Teal/Blue */
+    --secondary-foreground: 210 50% 10%; /* Darker text for contrast */
 
-    --muted: 200 25% 30%;      /* Muted Slate Blue */
-    --muted-foreground: 0 0% 65%; /* Dimmer text */
+    --muted: 210 25% 25%;      /* Muted Deep Blue */
+    --muted-foreground: 0 0% 65%; 
 
-    --accent: 180 40% 55%;      /* Sky Blue/Cyan - for accents like water or sky highlights */
-    --accent-foreground: 0 0% 10%; /* Dark text for contrast on accent */
+    --accent: 195 80% 65%;      /* Bright Cyan/Aqua */
+    --accent-foreground: 210 50% 10%; /* Dark text for contrast on accent */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 200 30% 15%;      /* Darker Slate Blue for borders */
-    --input: 200 25% 30%; 
-    --ring: 180 40% 60%;        /* Lighter Sky Blue for focus rings */
+    --border: 210 30% 10%;      /* Darker Deep Blue for borders */
+    --input: 210 25% 25%; 
+    --ring: 195 80% 70%;        /* Lighter Cyan/Aqua for focus rings */
     
-    --chart-1: 120 50% 60%; /* Leaf Green (adjusted for dark) */
-    --chart-2: 200 50% 65%; /* Sky Blue (adjusted for dark) */
-    --chart-3: 40 40% 60%;  /* Earthy Brown (adjusted for dark) */
-    --chart-4: 150 40% 55%; /* Teal Green (adjusted for dark) */
-    --chart-5: 30 50% 75%;  /* Sandy Brown (adjusted for dark) */
+    --chart-1: 200 70% 50%; /* Primary Blue */
+    --chart-2: 190 60% 60%; /* Secondary Teal/Blue */
+    --chart-3: 180 50% 70%; /* Lighter Aqua */
+    --chart-4: 210 40% 40%; /* Deeper Muted Blue */
+    --chart-5: 0 0% 60%;   /* Medium Gray for neutrality */
 
     /* Sidebar variables for dark theme */
-    --sidebar-background: 200 30% 18%; /* Slightly darker than main background */
+    --sidebar-background: 210 30% 12%; 
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 130 40% 40%; 
+    --sidebar-primary: 200 70% 50%; 
     --sidebar-primary-foreground: 0 0% 95%;
-    --sidebar-accent: 180 40% 55%; 
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 200 30% 12%;
-    --sidebar-ring: 180 40% 60%;
+    --sidebar-accent: 195 80% 65%; 
+    --sidebar-accent-foreground: 210 50% 15%;
+    --sidebar-border: 210 30% 8%;
+    --sidebar-ring: 195 80% 70%;
   }
 }
 

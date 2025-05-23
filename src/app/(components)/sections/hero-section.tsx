@@ -14,13 +14,13 @@ export function HeroSection() {
       {/* Placeholder for video background. Replace with <video> or next/video if available */}
       <Image
         src="https://placehold.co/1920x1080.png"
-        alt="Mountain landscape background"
+        alt="River water background"
         layout="fill"
         objectFit="cover"
         quality={80}
         priority
         className="opacity-30"
-        data-ai-hint="mountain landscape"
+        data-ai-hint="river water"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
 
