@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark"> {/* Apply dark class by default */}
+    <html lang="en" className="dark">{/* Apply dark class by default */}
       <body className={`${inter.variable} ${robotoMono.variable} antialiased font-sans`}>
         {children}
         <Toaster />
