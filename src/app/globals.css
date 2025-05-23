@@ -9,87 +9,90 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    /* Light Theme - Natural Landscape & Mountains */
+    --background: 0 0% 98%; /* Very Light Gray - clean base */
+    --foreground: 200 30% 15%; /* Dark Slate Blue text */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 200 30% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 275 100% 25%; /* Deep Indigo */
-    --primary-foreground: 0 0% 96%; /* Light Gray/Off-white */
-    --secondary: 289 64% 40%; /* Vibrant Violet */
-    --secondary-foreground: 0 0% 100%; /* White */
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 289 64% 40%; /* Vibrant Violet */
+    --popover-foreground: 200 30% 15%;
+    --primary: 130 45% 45%; /* Forest Green */
+    --primary-foreground: 0 0% 98%; /* Light Gray/Off-white */
+    --secondary: 130 40% 65%; /* Lighter Muted Green */
+    --secondary-foreground: 0 0% 10%; /* Dark text for contrast */
+    --muted: 0 0% 94%;
+    --muted-foreground: 200 20% 40%;
+    --accent: 180 50% 50%; /* Sky Blue/Cyan */
     --accent-foreground: 0 0% 100%; /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 275 100% 30%; /* Adjusted primary for ring */
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 180 50% 55%; /* Lighter Sky Blue for focus rings */
+    
+    --chart-1: 120 60% 50%; /* Leaf Green */
+    --chart-2: 200 60% 55%; /* Sky Blue */
+    --chart-3: 40 50% 50%;  /* Earthy Brown */
+    --chart-4: 150 50% 45%; /* Teal Green */
+    --chart-5: 30 60% 70%;  /* Sandy Brown */
     --radius: 0.5rem;
 
-    /* Sidebar variables for light theme (default) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 275 100% 25%; 
+    /* Sidebar variables for light theme */
+    --sidebar-background: 0 0% 96%; /* Slightly off-white */
+    --sidebar-foreground: 200 30% 15%;
+    --sidebar-primary: 130 45% 45%; 
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 289 64% 45%; 
+    --sidebar-accent: 180 50% 50%; 
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 275 100% 30%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 180 50% 55%;
   }
 
   .dark {
-    --background: 235 62% 30%; /* Dark Navy */
-    --foreground: 0 0% 96%; /* Light Gray/Off-white */
+    /* Dark Theme - Natural Landscape & Mountains */
+    --background: 200 30% 20%;  /* Dark Slate Blue/Teal - reminiscent of mountain lakes/night sky */
+    --foreground: 0 0% 90%;    /* Light Gray/Off-white */
 
-    --card: 235 62% 35%; /* Slightly Lighter Navy */
-    --card-foreground: 0 0% 96%;
+    --card: 200 30% 25%;      /* Slightly Lighter Slate Blue/Teal */
+    --card-foreground: 0 0% 90%;
 
-    --popover: 235 62% 35%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 200 30% 25%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 275 100% 25%; /* Deep Indigo */
-    --primary-foreground: 0 0% 96%;
+    --primary: 130 40% 40%;     /* Forest Green - for mountains/trees */
+    --primary-foreground: 0 0% 95%; /* Light Gray/Off-white for contrast */
 
-    --secondary: 289 64% 40%; /* Vibrant Violet (Used for secondary actions) */
-    --secondary-foreground: 0 0% 100%; /* White for contrast on violet */
+    --secondary: 130 35% 55%;    /* Muted Lighter Green - for highlights or secondary elements */
+    --secondary-foreground: 0 0% 10%; /* Dark text for contrast on lighter green */
 
-    --muted: 235 60% 40%; /* Muted Navy */
-    --muted-foreground: 0 0% 70%; /* Dimmer text */
+    --muted: 200 25% 30%;      /* Muted Slate Blue */
+    --muted-foreground: 0 0% 65%; /* Dimmer text */
 
-    --accent: 289 64% 40%; /* Vibrant Violet */
-    --accent-foreground: 0 0% 100%; /* White */
+    --accent: 180 40% 55%;      /* Sky Blue/Cyan - for accents like water or sky highlights */
+    --accent-foreground: 0 0% 10%; /* Dark text for contrast on accent */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 289 64% 30%; /* Darker Violet */
-    --input: 235 60% 40%; /* Muted Navy */
-    --ring: 289 64% 45%; /* Lighter Violet for focus */
+    --border: 200 30% 15%;      /* Darker Slate Blue for borders */
+    --input: 200 25% 30%; 
+    --ring: 180 40% 60%;        /* Lighter Sky Blue for focus rings */
     
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 120 50% 60%; /* Leaf Green (adjusted for dark) */
+    --chart-2: 200 50% 65%; /* Sky Blue (adjusted for dark) */
+    --chart-3: 40 40% 60%;  /* Earthy Brown (adjusted for dark) */
+    --chart-4: 150 40% 55%; /* Teal Green (adjusted for dark) */
+    --chart-5: 30 50% 75%;  /* Sandy Brown (adjusted for dark) */
 
     /* Sidebar variables for dark theme */
-    --sidebar-background: 235 62% 28%; 
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 289 64% 40%; 
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 275 100% 30%; 
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 289 64% 25%;
-    --sidebar-ring: 289 64% 45%;
+    --sidebar-background: 200 30% 18%; /* Slightly darker than main background */
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 130 40% 40%; 
+    --sidebar-primary-foreground: 0 0% 95%;
+    --sidebar-accent: 180 40% 55%; 
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 200 30% 12%;
+    --sidebar-ring: 180 40% 60%;
   }
 }
 
@@ -99,7 +102,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    /* Apply dark theme by default as per "dark navy background" */
+    /* Apply dark theme by default as per original setup */
     @apply dark;
   }
 }
