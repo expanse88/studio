@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-1">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-text-flow">
             {title}
           </span>
