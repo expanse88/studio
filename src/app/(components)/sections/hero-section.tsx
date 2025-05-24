@@ -25,9 +25,16 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-1">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-text-flow">
-            {title}
+            {title.split('').map((char, index) => (
+              <span
+                key={index}
+                className="inline-block transition-opacity duration-300 ease-in-out hover:opacity-30"
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
           </span>
         </h1>
         <p className="mt-6 max-w-md mx-auto text-lg text-foreground/80 sm:text-xl md:mt-8 md:max-w-2xl">
