@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { currentProfession, heroTexts } from '@/lib/data';
 import { ArrowDown } from 'lucide-react';
+import React from 'react'; // Import React for React.Fragment
 
 export function HeroSection() {
   const { title, subtitle } = heroTexts[currentProfession];
@@ -27,13 +28,15 @@ export function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-text-flow">
-            {title.split('').map((char, index) => (
-              <span
-                key={index}
-                className="inline-block transition-opacity duration-300 ease-in-out hover:opacity-30"
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </span>
+            {title.split(' ').map((word, wordIndex, wordsArray) => (
+              <React.Fragment key={wordIndex}>
+                <span
+                  className="inline-block transition-opacity duration-300 ease-in-out hover:opacity-30"
+                >
+                  {word}
+                </span>
+                {wordIndex < wordsArray.length - 1 && '\u00A0'}{/* Add space if not last word */}
+              </React.Fragment>
             ))}
           </span>
         </h1>
