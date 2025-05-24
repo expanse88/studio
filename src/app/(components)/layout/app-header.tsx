@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { currentProfession } from '@/lib/data';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 const navItems = [
   { label: 'Home', href: '#hero' },
@@ -24,7 +25,7 @@ export function AppHeader() {
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#hero" className="flex items-center space-x-2 transition-opacity hover:opacity-80">
           <Film className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl tracking-tight">Luminary Canvas</span>
+          <HoverFadeText text="Luminary Canvas" as="span" className="font-bold text-xl tracking-tight" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -35,7 +36,7 @@ export function AppHeader() {
               href={item.href}
               className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
             >
-              {item.label}
+              <HoverFadeText text={item.label} />
             </Link>
           ))}
         </nav>
@@ -54,7 +55,7 @@ export function AppHeader() {
                 <div className="flex items-center justify-between">
                    <Link href="#hero" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
                     <Film className="h-8 w-8 text-primary" />
-                    <span className="font-bold text-lg">Luminary Canvas</span>
+                    <HoverFadeText text="Luminary Canvas" as="span" className="font-bold text-lg" />
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                     <X className="h-6 w-6" />
@@ -69,7 +70,7 @@ export function AppHeader() {
                       className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {item.label}
+                       <HoverFadeText text={item.label} />
                     </Link>
                   ))}
                 </nav>

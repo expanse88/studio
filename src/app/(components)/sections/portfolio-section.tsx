@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ProjectCard } from '@/app/(components)/common/project-card';
 import { portfolioProjects, type Project } from '@/lib/data';
 import { ProjectDetailModal } from './project-detail-modal';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 export function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -17,7 +18,6 @@ export function PortfolioSection() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    // Delay clearing project to allow modal to animate out
     setTimeout(() => setSelectedProject(null), 300);
   };
 
@@ -25,10 +25,16 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">Dynamic Portfolio</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-            An interactive journey through my creative endeavors. Step into the work.
-          </p>
+          <HoverFadeText 
+            as="h2" 
+            text="Dynamic Portfolio" 
+            className="text-4xl font-bold tracking-tight text-primary sm:text-5xl" 
+          />
+          <HoverFadeText 
+            as="p" 
+            text="An interactive journey through my creative endeavors. Step into the work." 
+            className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80" 
+          />
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -1,6 +1,9 @@
 // src/app/(components)/common/interactive-timeline.tsx
+"use client";
+
 import type { TimelineEvent } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 interface InteractiveTimelineProps {
   events: TimelineEvent[];
@@ -31,7 +34,9 @@ export function InteractiveTimeline({ events }: InteractiveTimelineProps) {
             <Card className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300 transform hover:-translate-y-1 group-hover:border-accent border-transparent border">
               <CardHeader className={index % 2 !== 0 ? 'sm:text-right' : ''}>
                 <div className="sm:hidden text-sm font-semibold text-muted-foreground mb-1">{event.year}</div>
-                <CardTitle className="text-xl text-primary group-hover:text-accent transition-colors duration-300">{event.title}</CardTitle>
+                <CardTitle className="text-xl text-primary group-hover:text-accent transition-colors duration-300">
+                  <HoverFadeText text={event.title} />
+                </CardTitle>
               </CardHeader>
               <CardContent className={index % 2 !== 0 ? 'sm:text-right' : ''}>
                 <p className="text-foreground/80">{event.description}</p>

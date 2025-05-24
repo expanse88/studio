@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { currentProfession, heroTexts } from '@/lib/data';
 import { ArrowDown } from 'lucide-react';
-import React from 'react'; // Import React for React.Fragment
+import React from 'react';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 export function HeroSection() {
   const { title, subtitle } = heroTexts[currentProfession];
   return (
     <section id="hero" className="relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden">
-      {/* Placeholder for video background. Replace with <video> or next/video if available */}
       <Image
         src="https://placehold.co/1920x1080.png"
         alt="River water background"
@@ -35,14 +35,16 @@ export function HeroSection() {
                 >
                   {word}
                 </span>
-                {wordIndex < wordsArray.length - 1 && '\u00A0'}{/* Add space if not last word */}
+                {wordIndex < wordsArray.length - 1 && '\u00A0'}
               </React.Fragment>
             ))}
           </span>
         </h1>
-        <p className="mt-6 max-w-md mx-auto text-lg text-foreground/80 sm:text-xl md:mt-8 md:max-w-2xl">
-          {subtitle}
-        </p>
+        <HoverFadeText 
+          as="p" 
+          text={subtitle} 
+          className="mt-6 max-w-md mx-auto text-lg text-foreground/80 sm:text-xl md:mt-8 md:max-w-2xl" 
+        />
         <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
           <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow duration-300">
             <Link href="#portfolio">

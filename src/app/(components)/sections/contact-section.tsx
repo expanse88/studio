@@ -1,7 +1,7 @@
 // src/app/(components)/sections/contact-section.tsx
 "use client";
 
-import { useState } from 'react'; // Added useState here
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -12,6 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import { Send, Loader2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -36,7 +37,6 @@ export function ContactSection() {
 
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log("Form data submitted:", data);
     toast({
@@ -54,9 +54,11 @@ export function ContactSection() {
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-2xl shadow-primary/10">
             <CardHeader className="text-center">
-              <CardTitle className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">Collaborate With Me</CardTitle>
+              <CardTitle className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
+                <HoverFadeText text="Collaborate With Me" />
+              </CardTitle>
               <CardDescription className="mt-4 text-lg text-foreground/80">
-                Have a project in mind or just want to connect? Let&apos;s talk.
+                <HoverFadeText text="Have a project in mind or just want to connect? Let's talk." />
               </CardDescription>
             </CardHeader>
             <CardContent>

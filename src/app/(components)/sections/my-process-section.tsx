@@ -6,24 +6,23 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { processUpdates as initialProcessUpdates, type ProcessUpdate } from '@/lib/data';
 import Image from 'next/image';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 export function MyProcessSection() {
   const [updates, setUpdates] = useState<ProcessUpdate[]>(initialProcessUpdates);
 
-  // Simulate real-time updates (remove this in a real Firebase integration)
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // This is a mock update. In a real app, this would come from Firestore.
       const newUpdate: ProcessUpdate = {
         id: `update-${Date.now()}`,
         type: 'thought',
-        Icon: initialProcessUpdates[3].Icon, // Re-use an icon
+        Icon: initialProcessUpdates[Math.floor(Math.random() * initialProcessUpdates.length)].Icon,
         title: 'New Epiphany!',
         content: 'Just had a brilliant idea for the next phase of Project X. It involves more interactive elements and user-driven narrative choices.',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
-      setUpdates(prevUpdates => [newUpdate, ...prevUpdates.slice(0, 4)]); // Keep last 5 updates
-    }, 30000); // Add a new "thought" every 30 seconds
+      setUpdates(prevUpdates => [newUpdate, ...prevUpdates.slice(0, 4)]); 
+    }, 30000); 
 
     return () => clearInterval(intervalId);
   }, []);
@@ -32,10 +31,16 @@ export function MyProcessSection() {
     <section id="process" className="py-16 sm:py-24 bg-background/70 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">My Process Revealed</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-            A glimpse into my creative workflow and current explorations.
-          </p>
+          <HoverFadeText 
+            as="h2" 
+            text="My Process Revealed" 
+            className="text-4xl font-bold tracking-tight text-primary sm:text-5xl" 
+          />
+          <HoverFadeText 
+            as="p" 
+            text="A glimpse into my creative workflow and current explorations." 
+            className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80" 
+          />
         </div>
         
         <ScrollArea className="w-full whitespace-nowrap pb-4">
@@ -45,7 +50,9 @@ export function MyProcessSection() {
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-2">
                     <update.Icon className="h-6 w-6 text-accent" />
-                    <CardTitle className="text-xl">{update.title}</CardTitle>
+                    <CardTitle className="text-xl">
+                       <HoverFadeText text={update.title} />
+                    </CardTitle>
                   </div>
                   <CardDescription className="text-xs text-muted-foreground">{update.timestamp}</CardDescription>
                 </CardHeader>

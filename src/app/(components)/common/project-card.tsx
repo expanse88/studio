@@ -1,9 +1,12 @@
 // src/app/(components)/common/project-card.tsx
+"use client"; // Added "use client" as HoverFadeText is a client component and this component uses it.
+
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Project } from '@/lib/data';
 import { Eye } from 'lucide-react';
+import { HoverFadeText } from '@/app/(components)/common/hover-fade-text';
 
 interface ProjectCardProps {
   project: Project;
@@ -12,7 +15,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onViewProject }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/30 hover:scale-[1.02] flex flex-col h-full">
+    <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/30 hover:scale-[1.02] flex flex-col h-full group">
       <CardHeader className="p-0">
         <div className="aspect-video relative overflow-hidden">
           <Image
@@ -27,7 +30,9 @@ export function ProjectCard({ project, onViewProject }: ProjectCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
-        <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
+        <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
+           <HoverFadeText text={project.title} />
+        </CardTitle>
         <CardDescription className="text-foreground/70 line-clamp-3">{project.shortDescription}</CardDescription>
       </CardContent>
       <CardFooter className="p-6 pt-0">
